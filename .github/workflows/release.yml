@@ -4,6 +4,9 @@ on:
   push:
     tags:
       - "*"
+  release:
+    types:
+      - published
 
 permissions:
   contents: write
@@ -20,9 +23,10 @@ jobs:
           test -f manifest.json
           test -f main.js
 
-      - name: Create GitHub release and upload assets
+      - name: Upload plugin assets to release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ github.event.release.tag_name || github.ref_name }}
           files: |
             manifest.json
             main.js

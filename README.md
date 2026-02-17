@@ -26,7 +26,7 @@ The command applies the following transformations to the active note:
 2. Run **BRAT: Add a beta plugin for testing**.
 3. Enter this repository URL: `https://github.com/fwerner13/obsidian-normalize-chatgpt`.
 
-> Note: BRAT installs from the latest GitHub release. Each release must include `manifest.json` and `main.js` as release assets.
+> Note: BRAT installs from the latest GitHub release. This repository's workflow uploads `manifest.json` and `main.js` when you either push a tag or publish a release in the GitHub UI.
 
 ## Installation (manual)
 
