@@ -1,0 +1,10 @@
+{
+  "id": "normalize-chatgpt-text",
+  "name": "Normalize ChatGPT Text",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Adds a command to normalize ChatGPT-generated text in the active note.",
+  "author": "Codex",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}
