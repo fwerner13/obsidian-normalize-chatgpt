@@ -1,0 +1,32 @@
+name: Release Obsidian plugin
+
+on:
+  push:
+    tags:
+      - "*"
+  release:
+    types:
+      - published
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate release files
+        run: |
+          test -f manifest.json
+          test -f main.js
+
+      - name: Upload plugin assets to release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.release.tag_name || github.ref_name }}
+          files: |
+            manifest.json
+            main.js

@@ -19,6 +19,15 @@ The command applies the following transformations to the active note:
 7. Removes markers like `:contentReference[oaicite:N]{index=M}`.
 8. Removes blank lines between numbered list items (e.g., `1.`, `2)`), while leaving non-list spacing untouched.
 
+
+## Installation (BRAT)
+
+1. Install and enable the **BRAT** plugin in Obsidian.
+2. Run **BRAT: Add a beta plugin for testing**.
+3. Enter this repository URL: `https://github.com/fwerner13/obsidian-normalize-chatgpt`.
+
+> Note: BRAT installs from the latest GitHub release. This repository's workflow uploads `manifest.json` and `main.js` when you either push a tag or publish a release in the GitHub UI.
+
 ## Installation (manual)
 
 1. Copy `manifest.json` and `main.js` into a folder under your vault's plugins directory:
